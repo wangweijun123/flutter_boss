@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../model/Job.dart';
+import '../model/Company.dart';
 import '../item/JobListItem.dart';
+import '../company/company_detail.dart';
 
 class JobsTab extends StatefulWidget {
 
@@ -71,10 +73,31 @@ class JobList extends State<JobsTab> {
     Job job = _jobs[index];
     var jobItem = new InkWell(
       onTap: (){
-        showDialog(
+        /*showDialog(
           context: context,
           child: new AlertDialog(title: new Text('心情期待', style: new TextStyle(fontSize: 20),),),
-        );
+        );*/
+        // 跳转主页
+        print("跳转主页");
+        Navigator.push(context, MaterialPageRoute(
+            builder: (BuildContext context){
+              return new CompanyDetail(
+                  company: new Company(
+                      logo:"assets/images/ic_main_tab_company_pre.png",
+                    name: "xx",
+                    location: "hon",
+                    type: "xx",
+                    size: "xx",
+                    employee: "employee",
+                    hot: "hot",
+                    count: "count",
+                    inc: "inc",
+                  ),
+
+              );
+            }
+        ));
+
       },
 
       child: new JobListItem(job: job),
@@ -82,3 +105,14 @@ class JobList extends State<JobsTab> {
     return jobItem;
   }
 }
+
+/*
+final String logo;
+final String name;
+final String location;
+final String type;
+final String size;
+final String employee;
+final String hot;
+final String count;
+final String inc;*/

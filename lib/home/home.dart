@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../app/component/icon_table.dart';
 import '../app/view/Jobs_view.dart';
+import '../app/view/my_view.dart';
 //import '../job/job_list.dart';
  const double _kTabTextSize = 11.0;
 
@@ -52,7 +53,7 @@ class _BossAppState extends State<BossApp> with SingleTickerProviderStateMixin{
           new JobsTab(),
           new JobsTab(),
           new JobsTab(),
-          new JobsTab(),
+          new MineTab(),
         ],
       ),
 

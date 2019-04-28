@@ -19,7 +19,7 @@ class CompanyInc extends StatelessWidget {
                   children: <Widget>[
                     new Container(
                       margin: EdgeInsets.all(10.0,),
-                      child: new Text('公司介绍', style: new TextStyle(fontSize: 20.0),),
+                      child: new Text('公司介绍\ndddd\ndd\ndddd\nddddd\ndd\ndddd\ndddd\neeee', style: new TextStyle(fontSize: 20.0),),
 
                     ),
                   ],
